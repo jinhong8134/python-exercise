@@ -1,0 +1,9 @@
+{% extends "main.html" %}
+{% block page_content %}
+{% import "bootstrap/wtf.html" as wtf %} {{ wtf.quick_form(form) }}
+
+<form method="POST">
+    {{ form.hidden_tag() }}
+    {{ form.name.label }} {{ form.name() }} {{ form.submit() }}
+</form>
+{% endblock %}
